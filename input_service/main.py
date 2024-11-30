@@ -22,8 +22,8 @@ async def create_data(message: str = Body(..., embed=True)):
     hash_object = hashlib.sha256(message.encode())
     hash_hex = hash_object.hexdigest() 
     input_data = {
-        "message": message,
-        "secret": "101"
+        "secret": 12345,
+        "message": message
     }
     with open("input.json", "w") as f:
         json.dump(input_data, f)
@@ -31,5 +31,4 @@ async def create_data(message: str = Body(..., embed=True)):
     return {"secret": "101", "hash": hash_hex}
 
 if __name__ == "__main__":
-
     uvicorn.run("main:app", host="127.0.0.1", port=8002)
