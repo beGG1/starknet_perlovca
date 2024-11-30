@@ -22,3 +22,30 @@ creating witness
 
 11) snarkjs groth16 prove circuit_0000.zkey output.wtns proof.json public.json
 generating proof and public data
+
+
+-- Creating testnet account from docs https://github.com/m-kus/cairo-quickstart?tab=readme-ov-file#create-testnet-account
+1) export STARKNET_RPC="https://starknet-sepolia.public.blastapi.io/rpc/v0_7"
+export url
+2) sncast account create --url $STARKNET_RPC --name test
+creating account
+3) https://blastapi.io/faucets/starknet-sepolia-eth
+get test money
+Use the faucet https://blastapi.io/faucets/starknet-sepolia-eth
+
+Warning
+
+Some faucets do not correctly handle addresses with leading zeros stripped, if you see "Invalid address" error, just add a zero after '0x'
+
+4) sncast account deploy --url $STARKNET_RPC --name test --fee-token eth
+deploy account
+
+-- Set up garaga
+1) Go throu the docs https://github.com/keep-starknet-strange/garaga
+From the docs!!!! not readme. Readme is incorrect
+
+2) pip install git+https://github.com/keep-starknet-strange/garaga.git@adb5c4f386ac70959a65dbf78f14ea9390b74dff       (instead of pip install garaga)
+2.5) Don't forget to fill up the .secret file with 
+3) garaga gen --system groth16 --vk vk.json 
+Generating smart contract
+
