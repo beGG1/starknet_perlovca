@@ -1,7 +1,6 @@
 import React from 'react';
-import TextInput from './TextInput';
 
-const Form = ({ text, setText, handleSubmit }) => (
+const Form = ({ text, handleSubmit }) => (
   <form onSubmit={handleSubmit}>
     <button type="submit" disabled={!text.trim()}>Submit</button>
   </form>
