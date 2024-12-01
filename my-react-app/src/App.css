@@ -1,42 +1,109 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: 'Arial', sans-serif;
+  /* background-color: #f0f0f0; */
+  background: url('./assets/background.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  background-color: rgba(64, 64, 64, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form and button */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: #ffffff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.card {
-  padding: 2em;
+li {
+  background-color: #3d3d3d94;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text line */
 }
 
-.read-the-docs {
-  color: #888;
+p {
+  margin: 0;
+  color: #ffffff;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the input and button */
+}
+
+button {
+  width: 85%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #8c00ff;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 33px;
+}
+
+input {
+  color: #ffffff;
+  background-color: #333333;
+  border: 1px solid #555555;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+label {
+  color: #ffffff;
+  font-size: 16px;
+  width: 100%;
+  z-index: 1;
+}
+
+button:disabled {
+  background-color: #3d3d3d6b;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #470081;
+}
+
+button:hover {
+  background-color: #8c00ff;
+}
+
+.result-message {
+  padding: 10px;
+  border-radius: 4px;
 }
