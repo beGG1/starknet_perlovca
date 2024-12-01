@@ -1,0 +1,13 @@
+garaga gen --system groth16 --vk vkey.json
+
+garaga declare-project --project-path my_project/ --env-file .secrets --network sepolia --fee eth
+
+garaga deploy-project --class-hash 0x49c0e470cfc31f46e017e2d4d5806ac4a6b2cb24211f50734bb726dce9216b1 --fee eth
+
+garaga verify-onchain --system groth16 --contract-address 0x3fc99b264071e4148855abf2f723a38812eadc158eefc93adb822080dfbb60c --vk vk.json --proof proof.json --public-inputs public.json --env-file .secrets --network sepolia --fee eth
+
+
+
+class hash 0x1a104d9b53cdb00cf155cb1aacd898a00e9554ab735bd7c39eb34bc3e5a013c
+
+address 0x3fc99b264071e4148855abf2f723a38812eadc158eefc93adb822080dfbb60c

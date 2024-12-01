@@ -1,0 +1,1 @@
+{"version":1,"contracts":[{"id":"idb5rtga27lvm","package_name":"smart_contract","contract_name":"Groth16VerifierBN254","module_path":"smart_contract::groth16_verifier::Groth16VerifierBN254","artifacts":{"sierra":"smart_contract_Groth16VerifierBN254.contract_class.json","casm":"smart_contract_Groth16VerifierBN254.compiled_contract_class.json"}}]}
