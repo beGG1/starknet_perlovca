@@ -1,2 +1,0 @@
-node ./circuit_js/generate_witness.js ./circuit_js/circuit.wasm input.json output.wtns
-snarkjs groth16 prove circuit_0000.zkey output.wtns proof.json public.json
