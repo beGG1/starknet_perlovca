@@ -38,7 +38,7 @@ function App() {
       </form>
       {result && (
         <div id="result" className="result-message">
-          <p>Message: "{submittedMessage}" was sent for proof!</p>
+          <p>Message: was sent for proof!</p>
         </div>
       )}
     </div>
